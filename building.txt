@@ -1,0 +1,27 @@
+Simple Sitemap Creator requires the Lazarus IDE (v1.5 atleast) & FreePascal compiler to build.
+
+Windows
+-------
+The easiest options is to download the latest installer from http://www.lazarus-ide.org/
+
+FreeBSD/Linux/OSX
+-----------------
+There are a few options for UNIX based OS, this is my preferred method:
+
+Download and install FreePascal from http://www.freepascal.org/
+(FreeBSD/Linux users can install from pkg/ports/yum/apt/etc)
+
+Checkout the Lazarus source from their subversion repo:
+(Again FreeBSD/Linux users should find a version of Lazarus in their package manager)
+
+svn co http://svn.freepascal.org/svn/lazarus/trunk lazarus
+
+Then build the IDE
+
+cd lazarus
+make bigide
+[FreeBSD] gmake bigide
+
+After installation, simply load the IDE, open simplesitemapcreator.lpi from Project menu ->
+Open Project
+Shift-F9 to build the program

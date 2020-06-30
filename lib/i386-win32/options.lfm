@@ -1,0 +1,165 @@
+object frmOptions: TfrmOptions
+  Left = 343
+  Height = 244
+  Top = 155
+  Width = 414
+  BorderStyle = bsDialog
+  Caption = 'Настройки программы'
+  ClientHeight = 244
+  ClientWidth = 414
+  ParentBiDiMode = False
+  Position = poMainFormCenter
+  LCLVersion = '2.0.8.0'
+  object GroupBox1: TGroupBox
+    Left = 0
+    Height = 204
+    Top = 0
+    Width = 295
+    Align = alLeft
+    Caption = 'Опции'
+    ClientHeight = 184
+    ClientWidth = 291
+    TabOrder = 0
+    object checkDisableTheme: TCheckBox
+      Left = 5
+      Height = 19
+      Top = 5
+      Width = 156
+      Caption = 'Стандартный интерфейс'
+      TabOrder = 0
+    end
+    object Label2: TLabel
+      Left = 5
+      Height = 15
+      Top = 32
+      Width = 98
+      Caption = 'Редактор шрифта'
+      ParentColor = False
+    end
+    object textEditorFont: TEditButton
+      Left = 5
+      Height = 23
+      Top = 53
+      Width = 224
+      ButtonWidth = 23
+      MaxLength = 0
+      NumGlyphs = 1
+      OnButtonClick = textEditorFontButtonClick
+      PasswordChar = #0
+      TabOrder = 1
+    end
+    object textEditorFontSize: TSpinEdit
+      Left = 232
+      Height = 23
+      Top = 53
+      Width = 50
+      TabOrder = 2
+    end
+    object Label3: TLabel
+      Left = 5
+      Height = 15
+      Top = 80
+      Width = 55
+      Caption = 'UserAgent'
+      ParentColor = False
+    end
+    object textUserAgent: TComboBox
+      Left = 5
+      Height = 23
+      Top = 104
+      Width = 277
+      ItemHeight = 15
+      TabOrder = 3
+    end
+    object checkClearHistory: TCheckBox
+      Left = 8
+      Height = 19
+      Top = 136
+      Width = 124
+      Caption = 'Очистить историю'
+      TabOrder = 4
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 295
+    Height = 204
+    Top = 0
+    Width = 119
+    Align = alClient
+    Caption = 'Сканирование'
+    ClientHeight = 184
+    ClientWidth = 115
+    TabOrder = 1
+    object listIgnoreFiles: TListBox
+      Left = 5
+      Height = 110
+      Top = 20
+      Width = 100
+      ItemHeight = 0
+      OnClick = listIgnoreFilesClick
+      PopupMenu = PopupMenu1
+      TabOrder = 0
+    end
+    object Label1: TLabel
+      Left = 5
+      Height = 15
+      Top = 0
+      Width = 82
+      Caption = 'Игнорировать:'
+      ParentColor = False
+    end
+    object textFileType: TEdit
+      Left = 5
+      Height = 23
+      Top = 136
+      Width = 100
+      OnEnter = textFileTypeEnter
+      OnKeyPress = textFileTypeKeyPress
+      TabOrder = 1
+    end
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 40
+    Top = 204
+    Width = 414
+    Align = alBottom
+    BevelOuter = bvNone
+    ClientHeight = 40
+    ClientWidth = 414
+    TabOrder = 2
+    object btnOK: TButton
+      Left = 247
+      Height = 25
+      Top = 8
+      Width = 75
+      Caption = 'Ок'
+      OnClick = btnOKClick
+      TabOrder = 0
+    end
+    object btnCancel: TButton
+      Left = 327
+      Height = 25
+      Top = 8
+      Width = 75
+      Caption = 'Отмена'
+      OnClick = btnCancelClick
+      TabOrder = 1
+    end
+  end
+  object FontDialog1: TFontDialog
+    MinFontSize = 0
+    MaxFontSize = 0
+    left = 248
+    top = 24
+  end
+  object PopupMenu1: TPopupMenu
+    OnPopup = PopupMenu1Popup
+    left = 328
+    top = 48
+    object menuRemoveItem: TMenuItem
+      Caption = 'Remove'
+      OnClick = menuRemoveItemClick
+    end
+  end
+end
